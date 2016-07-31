@@ -25,6 +25,8 @@ php:
   hostname: php_host
 web:
   image: davenuman/bowline-centos
+  environment:
+    - VIRTUAL_HOST=shadypuck.com,www.shadypuck.com,mowstevomow.shadypuck.com
   command: httpd -D FOREGROUND -e debug
   expose:
     - "80"
